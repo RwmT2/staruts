@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staruts Construction and Projects Pty (Ltd)</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ccc;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('img/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* About and Services */
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .flex > div {
+            flex: 1;
+            margin: 10px;
+            min-width: 300px;
+        }
+
+        .bg-gray-100 {
+            background-color: #f3f3f3;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .rounded-lg {
+            border-radius: 10px;
+        }
+
+        .p-6 {
+            padding: 20px;
+        }
+
+        .list-disc {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Mobile Menu Toggle (simplified) */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+        }
+
+        .mobile-menu a {
+            margin: 10px 0;
+        }
+
+        .menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .menu-button {
+                display: block;
+            }
+
+            nav div {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="text-xl font-bold">Staruts Construction</a>
+            <div class="menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </div>
+            <div class="mobile-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#project-management">Project Management</a>
+                <a href="#maintenance">Maintenance</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Welcome to Staruts Construction and Projects</h1>
+                <p>Providing reliable project management services across Africa</p>
+                <a href="#contact">Get in Touch</a>
+            </div>
+        </section>
+
+        <section id="about" class="bg-gray-100">
+            <div class="container">
+                <h2 class="text-center">About Us</h2>
+                <div class="flex">
+                    <div>
+                        <h3>Company Background</h3>
+                        <p>Established with 7 years of experience in building construction and maintenance projects, Staruts Construction and Projects is managed by Mr. Sipho Morutse Maboshego, bringing leadership and expertise to every project we undertake.</p>
+                    </div>
+                    <div>
+                        <h3>Our Mission</h3>
+                        <p>We are committed to delivering strong service experiences and reliability in project management, ensuring that every client receives the highest quality of work and satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="text-center">Our Services</h2>
+                <div class="flex">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3>Construction Services</h3>
+                        <ul class="list-disc">
+                            <li>Reinforced Concrete and Structural Work</li>
+                            <li>Road Construction and Maintenance</li>
+                            <li>Refurbishment Services</li>
+                            <li>Excavation Services</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3>Project Management</h3>
+                        <ul class="list-disc">
+                            <li>Initiation and Planning</li>
+                            <li>Client Commitment</li>
+                            <li>Successful Project Delivery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-management" class="bg-gray-100">
+            <div class="container">
+                <h2 class="text-center">Project Management Excellence</h2>
+                <div class="flex">
+                    <div>
+                        <h3>Initiation and Planning</h3>
+                        <p>We specialize in initiating construction plans from the idealization stage to final construction, ensuring project feasibility and successful execution.</p>
+                    </div>
+                    <div>
+                        <h3>Client Commitment</h3>
+                        <p>Our commitment to working with skilled individuals and empowering SMEs leads to innovative solutions and successful project delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="maintenance">
+            <div class="container">
+                <h2 class="text-center">Maintenance & Support</h2>
+                <p class="text-center">We are committed to providing ongoing support and maintenance for all systems and equipment post-construction, ensuring the longevity and efficiency of your investment.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-100">
+            <div class="container">
+                <h2 class="text-center">Contact Us</h2>
+                <div class="max-w-lg mx-auto">
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Staruts Construction and Projects Pty (Ltd). All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
